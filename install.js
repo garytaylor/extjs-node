@@ -1,12 +1,12 @@
 var Download = require('download');
-var VERSION = '4.1.0'
+var VERSION = '4.2.0'
 var path = require('path');
 var fs = require('fs');
 var destFolder = path.resolve('./src');
 var DecompressZip = require('decompress-zip');
 console.log('Downloading from http://cdn.sencha.io/ext-' + VERSION + '-gpl.zip');
 var download = new Download()
-    .get('http://cdn.sencha.io/ext-' + VERSION + '-gpl.zip', path.resolve('./'), { extract: false});
+    .get('http://cdn.sencha.com/ext/gpl/ext-' + VERSION + '-gpl.zip', path.resolve('./'), { extract: false});
 
 download.run(function (err) {
     var unzipper;
